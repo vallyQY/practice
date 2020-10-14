@@ -1,0 +1,23 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+### VS Code
+.classpath
+.project
+
+/.*
+!/.gitignore
+/gradle
+gradlew
+gradlew.bat
+/out
+*/build/
+/generated
+/.idea
+*/out/
+/logs
+### VS Code
+**/bin/
+**/.settings/
