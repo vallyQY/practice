@@ -11,8 +11,26 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    ioVersion = "2.6"
+    guavaVersion = "29.0-jre"
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
     compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+    compile (group: 'ma.glasnost.orika', name: 'orika-core', version: '1.5.4'){
+        exclude group:'org.slf4j'
+    }
+    compile "commons-io:commons-io:$ioVersion"
+    compile "com.google.guava:guava:$guavaVersion"
+    compile 'cn.hutool:hutool-all:5.3.10'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+
+    compile group: 'org.springframework', name: 'spring-web', version: '5.2.8.RELEASE'
+    compile group: 'org.springframework', name: 'spring-tx', version: '5.2.8.RELEASE'
+    compile group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.8.RELEASE'
 
 }

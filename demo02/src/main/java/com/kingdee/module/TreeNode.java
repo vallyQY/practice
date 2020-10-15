@@ -1,4 +1,4 @@
-package com.kingdee.dto;
+package com.kingdee.module;
 
 import lombok.Data;
 
